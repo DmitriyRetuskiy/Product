@@ -42,7 +42,7 @@ class ProductService
         $status = $objProduct->status??'';
 
         if($status != ''){
-            $arrUpdate[] = ['status' => $objProduct->status];
+            $arrUpdate = array_merge($arrUpdate,['status' => $objProduct->status]);
         }
 
 
